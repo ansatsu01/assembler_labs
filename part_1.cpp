@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int x, res1, res2, res3;
+    int x, res1(0), res2(0), res3(0);
     std::cin >> x;
     if(x==0){throw std::exception ("division by zero!");}
 
@@ -34,7 +34,8 @@ int main() {
     mov res1, eax
 
     }
-    std::cout << res1 << std::endl ;
+std::cout << "c++ result : " << int(pow(x, 5) + 2*(pow(x,2) - 4) + x)/pow(x,3) << std::endl;
+    std::cout << "ass result :" <<  res1 << std::endl ;
 
 
 // (2x-1)(2x+1)(x+3) / 2x
@@ -66,7 +67,8 @@ int main() {
 
 
     }
-    std:: cout << res2 << std::endl;
+std::cout << "c++ result: " << int(2*x - 1)*(2*x + 1)*(x + 3)/(2*x) << std::endl;
+    std:: cout <<"ass result : " << res2 << std::endl;
 
     //(4x-1)(4x+1)/4
 
@@ -87,7 +89,8 @@ int main() {
     mov res3, eax
     }
 
-    std::cout << res3;
+std::cout << "c++ result : " << int(4*x-1)*(4*x+1)/4 << std::endl;
+    std::cout <<"ass result : " << res3 << std::endl;
 
     return 0;
 }
